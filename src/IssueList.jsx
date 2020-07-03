@@ -163,12 +163,12 @@ class IssueList extends React.Component {
         return { issues: newList };
       });
       const undoMessage = (
-          <span>
-            {`Deleted issue ${id} successfully.`}
-            <Button bsStyle="link" onClick={() => this.restoreIssue(id)}>
-              UNDO
-            </Button>
-          </span>
+        <span>
+          {`Deleted issue ${id} successfully.`}
+          <Button bsStyle="link" onClick={() => this.restoreIssue(id)}>
+            UNDO
+          </Button>
+        </span>
       );
       showSuccess(undoMessage);
     } else {
@@ -179,7 +179,7 @@ class IssueList extends React.Component {
   async restoreIssue(id) {
     const query = `mutation issueRestore($id: Int!) {
       issueRestore(id: $id)
-    }`
+    }`;
     const { showSuccess, showError } = this.props;
     const data = await graphQLFetch(query, { id }, showError);
     if (data) {
