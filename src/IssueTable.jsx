@@ -7,7 +7,7 @@ import {
 
 import UserContext from './UserContext.js';
 
-// eslint-disable-next line react/prefer-stateless-function
+// eslint-disable-next-line react/prefer-stateless-function
 class IssueRowPlain extends React.Component {
   render() {
     const {
